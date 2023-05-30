@@ -19,4 +19,4 @@ python preprocess.py
 cd TTS-main
 
 # run the training script with your configuration file
-python TTS/bin/train.py --config_path /path/to/config.json
+python TTS/bin/train.py --config_path config.json
