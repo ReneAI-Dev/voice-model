@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# navigate to the directory containing your preprocessing script
-cd ./
-
 # Download the Mozilla TTS repository as a ZIP file
 curl -LOk https://github.com/mozilla/TTS/archive/refs/heads/main.zip
 
@@ -15,8 +12,8 @@ rm main.zip
 # run your preprocessing script
 python preprocess.py
 
-# navigate to the directory containing the TTS code
-cd TTS-main
+# directory containing the TTS code
+# TTS-main
 
 # run the training script with your configuration file
-python TTS/bin/train.py --config_path config.json
+python TTS-main/TTS/bin/train_tacotron.py --config_path config.json
