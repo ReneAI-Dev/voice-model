@@ -4,10 +4,10 @@
 curl -LOk https://github.com/mozilla/TTS/archive/refs/heads/master.zip
 
 # Unzip the downloaded file
-unzip main.zip
+unzip *.zip
 
 # Delete the downloaded ZIP file
-rm main.zip
+rm *.zip
 
 # run your preprocessing script
 python3 preprocess.py
