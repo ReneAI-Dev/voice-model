@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Download the Mozilla TTS repository as a ZIP file
-curl -LOk https://github.com/mozilla/TTS/archive/refs/heads/main.zip
+curl -LOk https://github.com/mozilla/TTS/archive/refs/heads/master.zip
 
 # Unzip the downloaded file
 unzip main.zip
