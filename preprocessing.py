@@ -6,10 +6,10 @@ from pydub import AudioSegment
 from pydub.silence import split_on_silence
 
 # Directory containing .wav files
-wav_dir = 'path/to/your/wav/files'
+wav_dir = './'
 
 # CSV file containing transcriptions
-transcriptions_file = 'path/to/your/transcriptions.csv'
+transcriptions_file = 'transcriptions.csv'
 
 # Load transcriptions
 transcriptions = pd.read_csv(transcriptions_file)
