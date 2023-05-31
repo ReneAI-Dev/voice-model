@@ -13,7 +13,10 @@ rm *.zip
 python3 preprocessing.py
 
 # directory containing the TTS code
-cd TTS-master
-
+# cd TTS-master
+echo Working Directory:
+pwd
+echo Python Path:
+echo $PYTHONPATH
 # run the training script with your configuration file
-python3 TTS/bin/train_tacotron.py --config_path config.json
+python3 TTS-master/TTS/bin/train_tacotron.py --config_path config.json
