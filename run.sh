@@ -16,4 +16,4 @@ python3 preprocessing.py
 # TTS-main
 
 # run the training script with your configuration file
-python3 ./TTS-master/TTS/bin/train_tacotron.py --config_path config.json
+python3 TTS-master/TTS/bin/train_tacotron.py --config_path config.json
