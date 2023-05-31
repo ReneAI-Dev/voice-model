@@ -1,26 +1,26 @@
 {
-  "model": "Tacotron2",  // The model to use
-  "run_name": "run1",  // Name of the training run
+  "model": "Tacotron2",
+  "run_name": "run1",
   "run_description": "tacotron2 on your_dataset",
 
   "audio": {
-    "num_mels": 80,  // Number of mel filters in the filter bank
-    "num_freq": 1025,  // Number of frequency bins to consider
-    "sample_rate": 22050,  // The sample rate for your audio
-    "frame_length_ms": 50,  // The length of the FFT window
-    "frame_shift_ms": 12.5,  // The hop length
-    "preemphasis": 0.98,  // The preemphasis factor
-    "min_level_db": -100,  // The minimum level (in dB) below which anything is considered silence
-    "ref_level_db": 20,  // The reference level db, theoretically 20dB is the natural human volume level
-    "power": 1.5,  // The power to raise the spectrogram to prior to Griffin-Lim
-    "griffin_lim_iters": 60,  // Number of iterations for Griffin-Lim
-    "signal_norm": true,  // Whether to normalize the signal
-    "symmetric_norm": true,  // Whether to symmetrically normalize
-    "max_norm": 4.0,  // The maximum norm to normalize to (if symmetric_norm is true, this is the positive and negative limit)
-    "clip_norm": true,  // Whether to clip the signal at the maximum norm
-    "mel_fmin": 0.0,  // The minimum mel frequency
-    "mel_fmax": 8000.0,  // The maximum mel frequency
-    "do_trim_silence": true  // Whether to trim silence via VAD from the start and end of recording during training
+    "num_mels": 80,
+    "num_freq": 1025,
+    "sample_rate": 22050,
+    "frame_length_ms": 50,
+    "frame_shift_ms": 12.5,
+    "preemphasis": 0.98,
+    "min_level_db": -100,
+    "ref_level_db": 20,
+    "power": 1.5,
+    "griffin_lim_iters": 60,
+    "signal_norm": true,
+    "symmetric_norm": true,
+    "max_norm": 4.0,
+    "clip_norm": true,
+    "mel_fmin": 0.0,
+    "mel_fmax": 8000.0,
+    "do_trim_silence": true
   },
 
   "distributed": {
@@ -28,16 +28,16 @@
     "url": "tcp://localhost:54321"
   },
 
-  "reinit_layers": [],  // List of layers to reinitialize
+  "reinit_layers": [],
 
-  "output_path": "path/to/your/output/files",  // The path where the outputs will be saved
+  "output_path": "path/to/your/output/files",
 
   "datasets": [
     {
-      "name": "your_dataset",  // Name of the dataset
-      "path": "path/to/your/dataset",  // Path to your dataset
-      "meta_file_train": "metadata_train.csv",  // The file containing the metadata for training
-      "meta_file_val": "metadata_val.csv"  // The file containing the metadata for validation
+      "name": "your_dataset",
+      "path": "path/to/your/dataset",
+      "meta_file_train": "metadata_train.csv",
+      "meta_file_val": "metadata_val.csv"
     }
   ]
 }
