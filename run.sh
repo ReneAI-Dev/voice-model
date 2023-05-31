@@ -12,11 +12,15 @@ rm *.zip
 # run your preprocessing script
 python3 preprocessing.py
 
+# Add the TTS library directory to the Python Path
+export PYTHONPATH=$PYTHONPATH:/home/exohayvan/Documents/GitHub/voice-model/TTS-master
+
 # directory containing the TTS code
 # cd TTS-master
 echo Working Directory:
 pwd
 echo Python Path:
 echo $PYTHONPATH
+
 # run the training script with your configuration file
 python3 TTS-master/TTS/bin/train_tacotron.py --config_path config.json
