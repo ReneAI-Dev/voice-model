@@ -5,17 +5,16 @@ import pandas as pd
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 
-if not os.path.isfile(transcriptions_file):
-    # Create an empty DataFrame with the appropriate columns
-    default_transcriptions = pd.DataFrame(columns=['filename', 'transcription'])
-    # Write the DataFrame to a CSV file
-    default_transcriptions.to_csv(transcriptions_file, index=False)
-
 # Directory containing .wav files
 wav_dir = './'
 
 # CSV file containing transcriptions
 transcriptions_file = 'transcriptions.csv'
+if not os.path.isfile(transcriptions_file):
+    # Create an empty DataFrame with the appropriate columns
+    default_transcriptions = pd.DataFrame(columns=['filename', 'transcription'])
+    # Write the DataFrame to a CSV file
+    default_transcriptions.to_csv(transcriptions_file, index=False)
 
 # Load transcriptions
 transcriptions = pd.read_csv(transcriptions_file)
